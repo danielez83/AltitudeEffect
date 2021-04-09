@@ -48,13 +48,13 @@ VSMOW1816   = 2005.20*1e-6      # O-18/O-16 absolute ratio in VSMOW
 VSMOW21     = 155.76*1e-6       # H-2/H-1 absolute ratio in VSMOW
 
 # Vectors and matrixes memory allocation
-Zvector                 = np.linspace(MinZ, MaxZ,(MaxZ - MinZ)/Zres)    # Altitude levels 
-Tvector                 = Tz0 - (Zvector*MLR/1000)                      # Air temperature 
-VaporConcentration      = np.zeros(shape=(len(Zvector),1))              # Water vapor concentration 
-VaporComposition        = np.zeros(shape=(len(Zvector), 2))             # Water vapor composition. Column 1 d18O, Column 2 dD
-VaporFraction           = np.zeros(shape=(len(Zvector),1))              # Residual fraction of water vapor
-PrecComposition         = np.zeros(shape=(len(Zvector), 2))             # Precipitation composition. Column 1 d18O, Column 2 dD
-RHvector                = np.zeros(shape=(len(Zvector),1))              # Relative Humidity
+Zvector                 = np.linspace(MinZ, MaxZ, np.int((MaxZ - MinZ)/Zres))   # Altitude levels 
+Tvector                 = Tz0 - (Zvector*MLR/1000)                              # Air temperature 
+VaporConcentration      = np.zeros(shape=(len(Zvector),1))                      # Water vapor concentration 
+VaporComposition        = np.zeros(shape=(len(Zvector), 2))                     # Water vapor composition. Column 1 d18O, Column 2 dD
+VaporFraction           = np.zeros(shape=(len(Zvector),1))                      # Residual fraction of water vapor
+PrecComposition         = np.zeros(shape=(len(Zvector), 2))                     # Precipitation composition. Column 1 d18O, Column 2 dD
+RHvector                = np.zeros(shape=(len(Zvector),1))                      # Relative Humidity
 
 #%% Run Simulation
 # Assign initial conditions 
