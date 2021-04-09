@@ -125,7 +125,7 @@ ax2=plt.subplot(2, 1, 2)
 plt.scatter(dummy_altitude, dummy_prec_composition)
 plt.plot(dummy_altitude, predicted_composition, color='red', linewidth=1, linestyle='dashed')
 # Show model information
-buff_txt = r"$\delta^{18}$O=%.4f*Altitude%.4f (R$^{2}$=%.3f)" % (regressor.coef_, regressor.intercept_, R2)
+buff_txt = r"$\delta^{18}$O=%.4f*Altitude+%.4f (R$^{2}$=%.3f)" % (regressor.coef_, regressor.intercept_, R2)
 plt.text(0.5*max(dummy_altitude), max(dummy_prec_composition)-.5, buff_txt)
 plt.xlabel('Altitude (m ASL)')
 plt.ylabel(r'$\delta^{18}$O (‰)')
